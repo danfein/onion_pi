@@ -63,6 +63,9 @@ http://www.raspberrypi.org/phpBB3/viewtopic.php?f=66&t=68263"
 ## Onion Pi Config v0.3
 ## More information: https://github.com/breadtk/onion_pi/
 
+# Write to disk less, useful when running on flash memory
+AvoidDiskWrites 1
+
 # Transparent proxy port
 TransPort 9040
 # Explicit SOCKS port for applications.
@@ -75,7 +78,7 @@ Log notice file /var/log/tor/notices.log
 RunAsDaemon 1
 
 # Only ever run as a client. Do not run as a relay or an exit.
-ClientOnly
+# ClientOnly
 
 # Ensure resolution of .onion and .exit domains happen through Tor.
 AutomapHostsSuffixes .onion,.exit
